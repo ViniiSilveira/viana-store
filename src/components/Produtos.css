@@ -1,0 +1,70 @@
+.viana-card-container {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 2px solid #333;
+  width: 280px;
+  margin-left: 35px;
+}
+
+.viana-card-container:hover {
+  border-color: #b22222;
+}
+
+.produto-img {
+  width: 275px;
+  margin-left: 1px;
+  height: 330px;
+}
+
+.card-header h4 {
+  color: #fff;
+  font-size: 16px;
+  margin: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 120px;
+  padding-bottom: 15px;
+}
+
+.price {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.buy-btn {
+  background-color: #b22222;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 15px;
+}
