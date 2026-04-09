@@ -9,9 +9,9 @@ import CalcaDirty from '../assets/Calça Dirty Zara.jpg'
 export const products = [
   {
     id: 1,
-    tittle: "Camiseta BlackNine Oversized Streetwear", 
+    tittle: "Camiseta Black Nine Streetwear", 
     category: "Masculino",
-    preco: "129,90",
+    preco: "125,67",
     Image: camisetaBlack
   },
   {
@@ -37,7 +37,7 @@ export const products = [
   },
     {
     id: 5,
-    tittle: "Top Estilo Lingeri Zw Collection", 
+    tittle: "Top Estilo Lingerie Zw Collection", 
     category: "Feminino",
     preco: "319,99",
     Image: TopZwCollection

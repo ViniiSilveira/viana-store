@@ -11,6 +11,7 @@
 .logo-container {
   height: 180px; 
   background-color: #1A1A1B;
+  margin-top: 0.1px;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -18,7 +19,7 @@
 }
 
 .logo {
-  width: 275px; 
+  width: 275px;
 }
 
 .menu-items-container {
