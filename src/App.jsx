@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Adicionei o useEffect
 import { Sidebar } from './components/Sidebar';
 import { Produtos } from './components/Produtos';
 import { products } from './data/produtos';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 import './App.css';
 
 export default function App() {
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState('dash');
+
+ 
+  useEffect(() => {
+    AOS.init({
+      duration: 500, 
+      once: true,     
+    });
+  }, []);
 
   const filteredProducts = products
     .filter((produtos) => activeTab === 'dash' || produtos.category.toLowerCase() === activeTab.toLowerCase())
@@ -42,20 +53,21 @@ export default function App() {
           </div>
         </header>
 
-        <div className="h1-home">
+        <div className="h1-home" data-aos="fade-up"> {/* Exemplo de uso */}
           {search ? `Resultados para: ${search}` : 'Em Alta!'}
         </div>
         
         <div className="products-container">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((p, index) => (
-              <Produtos 
-                key={p.id} 
-                title={p.tittle} 
-                preco={p.preco} 
-                Image={p.Image} 
-                category={p.category} 
-              />
+              <div key={p.id} data-aos="fade-up" data-aos-delay={index * 50}>
+                <Produtos 
+                  title={p.tittle} 
+                  preco={p.preco} 
+                  Image={p.Image} 
+                  category={p.category} 
+                />
+              </div>
             ))
           ) : (
             <p style={{ padding: '20px', color: 'white' }}>Nenhum Resultado</p>
