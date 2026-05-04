@@ -1,7 +1,7 @@
 import './Produtos.css';
 import { ShoppingBag } from 'lucide-react';
 
-export function Produtos({ title, preco, Image, category }) {
+export function Produtos({ title, preco, Image, category, adicionarAoCarrinho }) {
   return (
     <div className="viana-card-container">
       <div className="card-img-container">
@@ -14,13 +14,16 @@ export function Produtos({ title, preco, Image, category }) {
         </div>
 
         <div className="category">
-            <span className='Categoria'>{category}</span>
+          <span className='Categoria'>{category}</span>
         </div>
 
         <div className="card-footer">
           <span className="price">R$ {preco}</span>
           
-          <button className="buy-btn">
+          <button 
+            className="buy-btn"
+            onClick={() => adicionarAoCarrinho({ title, preco, Image, category })}
+          >
             <ShoppingBag size={16} fill='white' />
             Comprar
           </button>
